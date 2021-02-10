@@ -7,7 +7,7 @@ $ git init
 Initialized empty Git repository in C:/workspace/git-command/.git/
 ```
 
-- #### git clone "url" : git repository 가져오기 (ex - git clone https://github.com/limwoobin/git-command)
+- #### git clone <url> : git repository 가져오기 (ex - git clone https://github.com/limwoobin/git-command)
 ```shell script
 $ git clone https://github.com/limwoobin/git-command
 Cloning into 'git-command'...

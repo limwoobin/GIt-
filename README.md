@@ -21,13 +21,13 @@ Unpacking objects: 100% (15/15), 2.72 KiB | 67.00 KiB/s, done.
 <hr/>
 
 ## git add : 파일의 추적을 시작하겠다는 의미
-<code>
+<pre><code>
     디렉토리의 파일은 Untracked , Tracked 두 가지의 상태로 나누어짐.
     파일에 수정이 일어나면 git 이 파일의 변경을 감지해 사용자에게 알려주는 것과 같은 파일을 추적하는 상태를 Tracked.
     이와 반대로 파일을 저장소에 저장할 필요가 없어 파일이 변경되어도 git 이 신경쓰지 않는 상태를 Untracked.
     새로 만든 파일은 Untracked 상태. 이후 git add 를 통해 해당 파일을 add 해주면 해당 파일은 Staging area 에 저장
     즉 , Tracked 상태가 되어 git 이 파일을 추적하게 된다.
-</code>
+</code></pre>
 
 - #### git add -h : git add 의 도움말을 볼 수 있음
 

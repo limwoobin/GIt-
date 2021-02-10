@@ -23,6 +23,7 @@ Unpacking objects: 100% (15/15), 2.72 KiB | 67.00 KiB/s, done.
 ## git add : 파일의 추적을 시작하겠다는 의미
 
 - #### git add -h : git add 의 도움말을 볼 수 있음
+$ git add -h
 ```shell script
 usage: git add [<options>] [--] <pathspec>...
 
@@ -46,3 +47,12 @@ usage: git add [<options>] [--] <pathspec>...
                           read pathspec from file
     --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
 ```
+
+- #### git add . 혹은 git add -A : 모든 변경사항을 add 한다.
+
+- #### git add <file name> : file name 에 해당하는 파일을 추적
+
+- #### git add -u : 변경사항이 있는 파일만 add ( 새로 생긴 파일은 제외 )
+
+- #### git add -p : 변경사항을 보여주며 차례차례 commit 사항을 정할 수 있음    
+

@@ -6,8 +6,10 @@
 $ git init
 Initialized empty Git repository in C:/workspace/git-command/.git/
 ```
+<br />
 
 > #### git clone <url> : git repository 가져오기 (ex - git clone https://github.com/limwoobin/git-command)
+    
 ```shell script
 $ git clone https://github.com/limwoobin/git-command
 Cloning into 'git-command'...
@@ -18,9 +20,11 @@ remote: Total 15 (delta 1), reused 15 (delta 1), pack-reused 0
 Unpacking objects: 100% (15/15), 2.72 KiB | 67.00 KiB/s, done.
 ```
 
+<br />
+    
 <hr/>
 
-## git add : 파일의 추적을 시작하겠다는 의미
+>> ## git add : 파일의 추적을 시작하겠다는 의미
 <pre><code>
     디렉토리의 파일은 Untracked , Tracked 두 가지의 상태로 나누어짐.
     파일에 수정이 일어나면 git 이 파일의 변경을 감지해 사용자에게 알려주는 것과 같은 파일을 추적하는 상태를 Tracked.
@@ -28,6 +32,8 @@ Unpacking objects: 100% (15/15), 2.72 KiB | 67.00 KiB/s, done.
     새로 만든 파일은 Untracked 상태. 이후 git add 를 통해 해당 파일을 add 해주면 해당 파일은 Staging area 에 저장
     즉 , Tracked 상태가 되어 git 이 파일을 추적하게 된다.
 </code></pre>
+
+<br />
 
 > #### git add -h : git add 의 도움말을 볼 수 있음
 
@@ -55,14 +61,19 @@ usage: git add [<options>] [--] <pathspec>...
                           read pathspec from file
     --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
 ```
+<br />
 
 > #### git add . 혹은 git add -A : 모든 변경사항을 add 한다.
+<br />
 
 > #### git add <file name> : file name 에 해당하는 파일을 추적
-
+<br />
+    
 > #### git add -u : 변경사항이 있는 파일만 add ( 새로 생긴 파일은 제외 )
+<br />
 
 > #### git add -p 혹은 git add --patch : 변경사항을 보여주며 차례차례 commit 사항을 정할 수 있음    
+    
 ```shell script
 $ git add -p
 (1/1) Stage this hunk [y,n,q,a,d,e,?]?
@@ -77,5 +88,5 @@ e : 현재 조각 내용을 직접 편집한다
 
 [출처] - https://nochoco-lee.tistory.com/40
 ```
-
+<br />
 <hr/>

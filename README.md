@@ -1,13 +1,13 @@
 # GIt-Command 
 
 
-- #### git init : git 생성하기
+> #### git init : git 생성하기
 ```shell script
 $ git init
 Initialized empty Git repository in C:/workspace/git-command/.git/
 ```
 
-- #### git clone <url> : git repository 가져오기 (ex - git clone https://github.com/limwoobin/git-command)
+> #### git clone <url> : git repository 가져오기 (ex - git clone https://github.com/limwoobin/git-command)
 ```shell script
 $ git clone https://github.com/limwoobin/git-command
 Cloning into 'git-command'...
@@ -29,7 +29,7 @@ Unpacking objects: 100% (15/15), 2.72 KiB | 67.00 KiB/s, done.
     즉 , Tracked 상태가 되어 git 이 파일을 추적하게 된다.
 </code></pre>
 
-- #### git add -h : git add 의 도움말을 볼 수 있음
+> #### git add -h : git add 의 도움말을 볼 수 있음
 
 ```shell script
 $ git add -h
@@ -56,11 +56,26 @@ usage: git add [<options>] [--] <pathspec>...
     --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
 ```
 
-- #### git add . 혹은 git add -A : 모든 변경사항을 add 한다.
+> #### git add . 혹은 git add -A : 모든 변경사항을 add 한다.
 
-- #### git add <file name> : file name 에 해당하는 파일을 추적
+> #### git add <file name> : file name 에 해당하는 파일을 추적
 
-- #### git add -u : 변경사항이 있는 파일만 add ( 새로 생긴 파일은 제외 )
+> #### git add -u : 변경사항이 있는 파일만 add ( 새로 생긴 파일은 제외 )
 
-- #### git add -p : 변경사항을 보여주며 차례차례 commit 사항을 정할 수 있음    
+> #### git add -p 혹은 git add --patch : 변경사항을 보여주며 차례차례 commit 사항을 정할 수 있음    
+```shell script
+$ git add -p
+(1/1) Stage this hunk [y,n,q,a,d,e,?]?
 
+y : 이 조각(hunk) 이 이후 커밋에 포함될 수 있도록 stage 시킨다
+n : 이 조각이 이후 커밋에 포함되지 않도록 stage 대상에서 제외한다
+q : 이 조각 및 이후 모든 조각들을 stage 시키지 않는다
+a : 이 조각과 이후 현재 파일 내 모든 조각들을 stage 시킨다
+d : 이 조각 및 이후 현재 파일 내의 모든 조각들을 stage 시키지 않는다
+e : 현재 조각 내용을 직접 편집한다
+? : 조각 관련 도움말을 표시한다
+
+[출처] - https://nochoco-lee.tistory.com/40
+```
+
+<hr/>

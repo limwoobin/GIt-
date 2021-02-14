@@ -90,3 +90,40 @@ e : 현재 조각 내용을 직접 편집한다
 ```
 <br />
 <hr/>
+
+> #### git commit -m <Message> : 모든 파일의 변경사항 커밋하기
+
+```shell script
+$ ls
+README.md test.sh
+```
+
+```shell script
+$ vi test.sh
+
+test
+test23
+
+:wq
+```
+test.sh 파일을 수정하고 저장
+
+```shell script
+$ git add test.sh
+$ git commit -m "test commit"
+[master 2993728] test commit
+ 1 file changed, 2 insertions(+)
+```
+
+git log 명령어를 이용해 커밋이 지정한 메시지로 정상적으로 저장되었는지 확인
+```shell script
+$ git log
+
+commit 299372869c6666d5908f3f89384e88cf9330af82 (HEAD -> master)
+Author: limwoobin <drogba02@naver.com>
+Date:   Sun Feb 14 17:21:10 2021 +0900
+
+    test commit
+```
+
+<hr/>

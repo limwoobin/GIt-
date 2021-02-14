@@ -91,7 +91,7 @@ e : 현재 조각 내용을 직접 편집한다
 <br />
 <hr/>
 
-> #### git commit -m <Message> : 모든 파일의 변경사항 커밋하기
+> #### git commit -m "commit message" : 모든 파일의 변경사항 커밋하기
 
 ```shell script
 $ ls

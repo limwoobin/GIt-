@@ -91,7 +91,7 @@ e : 현재 조각 내용을 직접 편집한다
 <br />
 <hr/>
 
-> #### git commit -m "commit message" : 모든 파일의 변경사항 커밋하기
+> ### git commit -m "commit message" : 모든 파일의 변경사항 커밋하기
 
 ```shell script
 $ ls
@@ -127,3 +127,21 @@ Date:   Sun Feb 14 17:21:10 2021 +0900
 ```
 
 <hr/>
+
+> ### git clone "url" : git repository 받아오기
+
+```shell script
+$ git clone https://github.com/limwoobin/git-command
+Cloning into 'git-command'...
+remote: Enumerating objects: 52, done.
+remote: Counting objects: 100% (52/52), done.
+remote: Compressing objects: 100% (44/44), done.
+remote: Total 52 (delta 13), reused 14 (delta 1), pack-reused 0
+Unpacking objects: 100% (52/52), 12.83 KiB | 94.00 KiB/s, done.
+```
+
+```shell script
+$ ls
+git command/
+```
+git repository 를 받아온 후 내 디렉터리에서 확인 가능

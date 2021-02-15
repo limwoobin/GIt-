@@ -3,7 +3,7 @@
 
 > #### git init : git 생성하기
 ```shell script
-$ git init
+PS C:\workspace\git-command> git init
 Initialized empty Git repository in C:/workspace/git-command/.git/
 ```
 <br />
@@ -11,7 +11,7 @@ Initialized empty Git repository in C:/workspace/git-command/.git/
 > #### git clone <url> : git repository 가져오기 (ex - git clone https://github.com/limwoobin/git-command)
     
 ```shell script
-$ git clone https://github.com/limwoobin/git-command
+PS C:\workspace\git-command> git clone https://github.com/limwoobin/git-command
 Cloning into 'git-command'...
 remote: Enumerating objects: 15, done.
 remote: Counting objects: 100% (15/15), done.
@@ -38,7 +38,7 @@ Unpacking objects: 100% (15/15), 2.72 KiB | 67.00 KiB/s, done.
 > #### git add -h : git add 의 도움말을 볼 수 있음
 
 ```shell script
-$ git add -h
+PS C:\workspace\git-command> git add -h
 usage: git add [<options>] [--] <pathspec>...
 
     -n, --dry-run         dry run
@@ -75,7 +75,7 @@ usage: git add [<options>] [--] <pathspec>...
 > #### git add -p 혹은 git add --patch : 변경사항을 보여주며 차례차례 commit 사항을 정할 수 있음    
     
 ```shell script
-$ git add -p
+PS C:\workspace\git-command> git add -p
 (1/1) Stage this hunk [y,n,q,a,d,e,?]?
 
 y : 이 조각(hunk) 이 이후 커밋에 포함될 수 있도록 stage 시킨다
@@ -94,12 +94,12 @@ e : 현재 조각 내용을 직접 편집한다
 > ### git commit -m "commit message" : 모든 파일의 변경사항 커밋하기
 
 ```shell script
-$ ls
+PS C:\workspace\git-command> ls
 README.md test.sh
 ```
 
 ```shell script
-$ vi test.sh
+PS C:\workspace\git-command> vi test.sh
 
 test
 test23
@@ -109,15 +109,15 @@ test23
 test.sh 파일을 수정하고 저장
 
 ```shell script
-$ git add test.sh
-$ git commit -m "test commit"
+PS C:\workspace\git-command> git add test.sh
+PS C:\workspace\git-command> git commit -m "test commit"
 [master 2993728] test commit
  1 file changed, 2 insertions(+)
 ```
 
 git log 명령어를 이용해 커밋이 지정한 메시지로 정상적으로 저장되었는지 확인
 ```shell script
-$ git log
+PS C:\workspace\git-command> git log
 
 commit 299372869c6666d5908f3f89384e88cf9330af82 (HEAD -> master)
 Author: limwoobin <drogba02@naver.com>
@@ -131,7 +131,7 @@ Date:   Sun Feb 14 17:21:10 2021 +0900
 > ### git clone "url" : git repository 받아오기
 
 ```shell script
-$ git clone https://github.com/limwoobin/git-command
+PS C:\workspace\git-command> git clone https://github.com/limwoobin/git-command
 Cloning into 'git-command'...
 remote: Enumerating objects: 52, done.
 remote: Counting objects: 100% (52/52), done.
@@ -141,7 +141,28 @@ Unpacking objects: 100% (52/52), 12.83 KiB | 94.00 KiB/s, done.
 ```
 
 ```shell script
-$ ls
+PS C:\workspace\git-command> ls
 git command/
 ```
 git repository 를 받아온 후 내 디렉터리에서 확인 가능
+
+<hr/>
+
+> ## git remote : 원격 저장소를 관리할 수 있는 명령어
+
+> #### git remote -v : 현재 디렉터리에 연결되어 있는 원격 저장소(repository) 확인
+
+```shell script
+PS C:\workspace\git-command> git remote -v
+origin  https://github.com/limwoobin/git-command (fetch)
+origin  https://github.com/limwoobin/git-command (push)
+```
+
+> #### git remote remove name : 연결되어있는 원격 저장소 제거
+
+```shell script
+PS C:\workspace\git-command> git remote remove origin
+PS C:\workspace\git-command> ls
+
+
+```

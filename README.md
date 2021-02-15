@@ -162,7 +162,7 @@ origin  https://github.com/limwoobin/git-command (push)
 
 ```shell script
 PS C:\workspace\git-command> git remote remove origin
-PS C:\workspace\git-command> ls
+PS C:\workspace\git-command> git remote -v
 
 
 ```

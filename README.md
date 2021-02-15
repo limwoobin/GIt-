@@ -158,11 +158,16 @@ origin  https://github.com/limwoobin/git-command (fetch)
 origin  https://github.com/limwoobin/git-command (push)
 ```
 
-> #### git remote remove name : 연결되어있는 원격 저장소 제거
+> #### git remote remove "name" : 연결되어있는 원격 저장소 제거
 
 ```shell script
 PS C:\workspace\git-command> git remote remove origin
 PS C:\workspace\git-command> git remote -v
 
 
+```
+
+```
+origin : 원격 저장소의 이름
+git clone 을 이용하면 자동으로 origin 이라는 이름의 원격저장소가 등록됨.
 ```

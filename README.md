@@ -150,6 +150,8 @@ git repository 를 받아온 후 내 디렉터리에서 확인 가능
 
 > ## git remote : 원격 저장소를 관리할 수 있는 명령어
 
+<br />
+
 > #### git remote -v : 현재 디렉터리에 연결되어 있는 원격 저장소(repository) 확인
 
 ```shell script
@@ -158,19 +160,21 @@ origin  https://github.com/limwoobin/git-command (fetch)
 origin  https://github.com/limwoobin/git-command (push)
 ```
 
+<br />
+
 > #### git remote remove "name" : 연결되어있는 원격 저장소 제거
 
 ```shell script
 PS C:\workspace\git-command> git remote remove origin
 PS C:\workspace\git-command> git remote -v
-
-
 ```
 
 ```
 origin : 원격 저장소의 이름
 git clone 을 이용하면 자동으로 origin 이라는 이름의 원격저장소가 등록됨.
 ```
+
+<br />
 
 > #### git remote add `<별칭>` `<연결할 url>` : 내 디렉터리에 원격 repository 연결
 
@@ -216,3 +220,5 @@ PS C:\workspace\test_dir>
 ```
 
 이 디렉터리와 git repository 가 연결된 것을 확인할 수 있음
+
+<br />

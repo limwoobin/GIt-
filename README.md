@@ -171,3 +171,48 @@ PS C:\workspace\git-command> git remote -v
 origin : 원격 저장소의 이름
 git clone 을 이용하면 자동으로 origin 이라는 이름의 원격저장소가 등록됨.
 ```
+
+> #### git remote add `<별칭>` `<연결할 url>` : 내 디렉터리에 원격 repository 연결
+
+<code> ex) git remote add origin https://github.com/limwoobin/git-command</code>
+
+```shell script
+PS C:\workspace\> mkdir test_dir
+PS C:\workspace\> cd test_dir
+PS C:\workspace\test_dir\> pwd
+PS C:\workspace\test_dir\> C:\workspace\test_dir
+```
+
+테스트를 위해 빈 디렉터리 생성 후 접속
+
+```shell script
+PS C:\workspace\test_dir> git remote -v
+fatal: not a git repository (or any of the parent directories): .git
+```
+
+빈 디렉터리이므로 위와 같은 메시지 발생. 
+이 디렉터리를 git 으로 관리/사용하기 위한 설정 필요
+
+```shell script
+PS C:\workspace\test_dir> git init
+Initialized empty Git repository in C:/workspace/test_dir/.git/
+
+PS C:\workspace\test_dir> ls -al
+drwxr-xr-x 1 drogb 197609 0  2월 16 18:43 ./
+drwxr-xr-x 1 drogb 197609 0  2월 16 18:42 ../
+drwxr-xr-x 1 drogb 197609 0  2월 16 18:43 .git/
+```
+
+위와 같이 git init 을 이용해 이 디렉터리를 git 으로 관리한다는 명렁어를 실행하면 .git 파일을 확인할 수 있음
+
+```shell script
+PS C:\workspace\test_dir> git remote -v
+PS C:\workspace\test_dir>
+PS C:\workspace\test_dir> git remote add origin https://github.com/limwoobin/git-command
+PS C:\workspace\test_dir> git remote -v
+origin  https://github.com/limwoobin/git-command (fetch)
+origin  https://github.com/limwoobin/git-command (push)
+PS C:\workspace\test_dir>
+```
+
+이 디렉터리와 git repository 가 연결된 것을 확인할 수 있음

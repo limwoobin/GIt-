@@ -232,12 +232,12 @@ PS C:\workspace\test_dir>
 ```shell script
 PS C:\workspace\git-command> ls
 README.md test.sh
-PS C:\workspace\git-command> vi test.sh
 ```
 
 differentTest 라는 문구를 추가하고 저장.
 
 ```shell script
+PS C:\workspace\git-command> vi test.sh
 test
 
 differentTest

@@ -222,3 +222,43 @@ PS C:\workspace\test_dir>
 이 디렉터리와 git repository 가 연결된 것을 확인할 수 있음
 
 <br />
+
+<hr/>
+
+> #### git diff : 로컬 디렉터리에 있는 파일과 최근 커밋된 파일과의 차이를 보여줌
+
+로컬 디렉터리의 파일을 변경해 최근 커밋된 파일과의 차이를 만듦
+
+```shell script
+PS C:\workspace\git-command> ls
+README.md test.sh
+PS C:\workspace\git-command> vi test.sh
+```
+
+differentTest 라는 문구를 추가하고 저장.
+
+```shell script
+test
+
+differentTest
+
+
+
+:wq
+```
+
+
+```shell script
+PS C:\workspace\git-command> git diff
+warning: LF will be replaced by CRLF in test.sh.
+The file will have its original line endings in your working directory
+diff --git a/test.sh b/test.sh
+index fb0d3cb..8c4b4a2 100644
+--- a/test.sh
++++ b/test.sh
+@@ -1,2 +1,3 @@
+ test
+-test23
++
++diffentTest
+```

@@ -262,3 +262,10 @@ index fb0d3cb..8c4b4a2 100644
 +
 +diffentTest
 ```
+
+<br />
+
+> #### git fetch : 원격 repository 의 파일을 다운받음
+> (로컬 브랜치는 원래 가지고 있던 로컬 repository의 최근 커밋 위치를 가리키고, 원격 저장소 origin/master는 가져온 최신 커밋을 가리킴)
+
+

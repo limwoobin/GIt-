@@ -264,8 +264,9 @@ index fb0d3cb..8c4b4a2 100644
 ```
 
 <br />
+<hr/>
 
-> #### git fetch : 원격 repository 의 파일을 다운받음
+> ## git fetch : 원격 repository 의 파일을 다운받음
 > (로컬 브랜치는 원래 가지고 있던 로컬 repository의 최근 커밋 위치를 가리키고, 원격 저장소 origin/master는 가져온 최신 커밋을 가리킴)
 
 ```shell script
@@ -396,4 +397,3 @@ Date:   Fri Feb 19 15:52:49 2021 +0900
 ```
 
 위와 같이 최신 커밋 bcd186afa69eb27e6b06ea16b9b661e11edd2e46에 (HEAD -> master, origin/master, origin/HEAD) 를 확인 가능
-

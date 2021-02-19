@@ -268,4 +268,132 @@ index fb0d3cb..8c4b4a2 100644
 > #### git fetch : 원격 repository 의 파일을 다운받음
 > (로컬 브랜치는 원래 가지고 있던 로컬 repository의 최근 커밋 위치를 가리키고, 원격 저장소 origin/master는 가져온 최신 커밋을 가리킴)
 
+```shell script
+PS C:\workspace\> git clone https://github.com/limwoobin/git-command git-command2
+Cloning into 'git-command'...
+remote: Enumerating objects: 15, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 15 (delta 1), reused 15 (delta 1), pack-reused 0
+Unpacking objects: 100% (15/15), 2.72 KiB | 67.00 KiB/s, done.
+
+PS C:\workspace\> cd git-command2
+PS C:\workspace\git-command2> ls 
+README.md
+```
+
+테스트를 위해 git-command2 라는 이름의 디렉터리로 clone
+
+```shell script
+PS C:\workspace\git-command2> vi test.sh
+
+test
+
+fetch test!!
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+:wq
+```
+
+```shell script
+PS C:\workspace\git-command2> git add .
+PS C:\workspace\git-command2> git commit -m "fetch test"
+[master bcd186a] fetch test
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\workspace\git-command2> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 287 bytes | 287.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/limwoobin/git-command
+   1d0df15..bcd186a  master -> master
+```
+
+테스트 파일인 test.sh 를 생성 후 저장 및 푸시
+
+```shell script
+PS C:\workspace\git-command> git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 267 bytes | 33.00 KiB/s, done.
+From https://github.com/limwoobin/git-command
+   1d0df15..bcd186a  master     -> origin/master
+```
+
+git-command 디렉터리로 돌아온 후 fetch 로 변경사항 내려받기
+이 때 가져온 최신 commit 은 이름없는 로컬 branch 로 가져오게 됨.
+FETCH_HEAD 이라는 이름으로 checkout 해서 확인 가능
+
+```shell script
+PS C:\workspace\git-command> git checkout FETCH_HEAD
+PS C:\workspace\git-command> git branch 
+* (HEAD detached at FETCH_HEAD)
+  master
+```
+
+FETCH_HEAD 라는 이름의 branch 로 체크아웃하면 위와 같이 확인 가능
+
+
+```shell script
+PS C:\workspace\git-command> 
+commit bcd186afa69eb27e6b06ea16b9b661e11edd2e46 (HEAD, origin/master, origin/HEAD)
+Author: limwoobin <drogba02@naver.com>
+Date:   Fri Feb 19 16:17:38 2021 +0900
+
+    fetch test
+
+commit 1d0df15b680e340599f31c30f8b75c7894420aea (master)
+Author: limwoobin <drogba02@naver.com>
+Date:   Fri Feb 19 15:52:49 2021 +0900
+
+    git fetch test
+```
+
+위와 같이 fetch 로 가져온 최신 commit 은 
+bcd186afa69eb27e6b06ea16b9b661e11edd2e46(HEAD , origin/master , origin/HEAD) 인것을 확인 가능
+
+기존의 디렉터리의 최신 commit 은
+1d0df15b680e340599f31c30f8b75c7894420aea (master) 인 것을 확인 할 수 있음
+
+```shell script
+PS C:\workspace\git-command> git checkout master
+* master
+PS C:\workspace\git-command> git merge
+Updating 1d0df15..bcd186a
+Fast-forward
+ test.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+```
+
+다시 master branch 로 돌아와 FETCH_HEAD branch 와 merge.
+
+```shell script
+PS C:\workspace\git-command> git log
+commit bcd186afa69eb27e6b06ea16b9b661e11edd2e46 (HEAD -> master, origin/master, origin/HEAD)
+Author: limwoobin <drogba02@naver.com>
+Date:   Fri Feb 19 16:17:38 2021 +0900
+
+    fetch test
+
+commit 1d0df15b680e340599f31c30f8b75c7894420aea
+Author: limwoobin <drogba02@naver.com>
+Date:   Fri Feb 19 15:52:49 2021 +0900
+
+    git fetch test
+```
+
+위와 같이 최신 커밋 bcd186afa69eb27e6b06ea16b9b661e11edd2e46에 (HEAD -> master, origin/master, origin/HEAD) 를 확인 가능
 

@@ -396,4 +396,9 @@ Date:   Fri Feb 19 15:52:49 2021 +0900
     git fetch test
 ```
 
+![fetch](https://user-images.githubusercontent.com/28802545/108589005-931bd080-739f-11eb-93d1-e6a72b9549cc.png)
+
+![fetch2](https://user-images.githubusercontent.com/28802545/108589019-a464dd00-739f-11eb-9f28-16bfbe2bf7f1.png)
+
+
 위와 같이 최신 커밋 bcd186afa69eb27e6b06ea16b9b661e11edd2e46에 (HEAD -> master, origin/master, origin/HEAD) 를 확인 가능
